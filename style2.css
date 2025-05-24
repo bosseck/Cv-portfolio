@@ -25,6 +25,7 @@ body {
     background: var(--bg-color); /* Fond de la page */
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
@@ -83,7 +84,7 @@ span{
 }
 
     .cv-container {
-      margin-top: 6%;
+      margin-top: 10%;
       display: flex;
       width: 900px;
       background-color: #fff;
