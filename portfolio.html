@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Déclaration du type de document HTML5 -->
+<html lang="fr"> <!-- Langue du document définie sur le français -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- Encodage des caractères en UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    
+    <!-- Lien vers les icônes FontAwesome -->
+    <!-- Pour l'icon -->
+    <link rel="shortcut icon" href="desktop26.ico" type="image/x-icon">
+    
+    <!-- Lien vers la feuille de style personnalisée -->
     <link rel="stylesheet" href="style3.css">
-    <title>Portfolio</title>
+
+    <!-- Titre de l’onglet du navigateur -->
+    <title>Accueil</title>
 </head>
 <body>
-      <!-- En-tête de la page contenant le logo et le menu -->
+    <!-- En-tête de la page contenant le logo et le menu -->
     <header class="header">
         <!-- Logo cliquable qui mène à la section "Accueil" -->
         <a href="index.html" class="logo">Tony <span>Pro</span></a>
@@ -21,7 +29,7 @@
             <a href="cv.html">Cv</a>
             <a href="#portfolio">Portfolio</a>
         </nav>
-    </header> 
+    </header>
 
     <h1 class="titre">Mes Projets</h1>
       <!-- ======= SECTION PROJET ======= -->
@@ -179,5 +187,13 @@
     </div>
   </div>
 </body>
+<script type="text/javascript" charset="utf-8">
+    const menuIcon = document.querySelector('#menu-icon');
+    const navbar = document.querySelector('.navbar');
+
+    menuIcon.onclick = () => {
+        navbar.classList.toggle('active');
+    };
+</script>
 <script src="script.js"></script>
 </html>

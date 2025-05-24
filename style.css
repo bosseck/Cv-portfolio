@@ -1,4 +1,4 @@
-* {
+    * {
     margin: 0; /* Supprime les marges par défaut */
     padding: 0; /* Supprime les espacements internes par défaut */
     box-sizing: border-box; /* Inclus le padding et border dans les dimensions */
@@ -116,8 +116,8 @@ span{
 .home-img img{
     position: relative;
     top: 3rem;
-    width: 40vh;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     box-shadow: 0 0 25px var(--main-color);
     cursor: pointer;
@@ -203,7 +203,7 @@ span{
     position: relative;
 }
 .text-animation span::before{
-    content: "web developer";
+    content: "Designer Frontend";
     color: var(--main-color);
     animation: words 20s infinite;
 }
@@ -217,8 +217,8 @@ span{
     right: -8px;
     animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
 }
-@keyframes cursor {
-    to {
+@keyframes cursor{
+    to{
         border-left: 2px solid var(--main-color);
     }
 }
@@ -237,6 +237,7 @@ span{
         width: calc(100% + 8px);
     }
 }
+
 /* Style de la barre de défilement */
 ::-webkit-scrollbar {
     width: 15px;
@@ -247,4 +248,64 @@ span{
 ::-webkit-scrollbar-track {
     background-color: var(--bg-color);
     width: 50px;
+}
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        padding: 2rem 5%;
+    }
+
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--second-bg-color);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 1.5rem 0;
+        font-size: 2rem;
+    }
+
+    .home {
+        flex-direction: column;
+        gap: 5rem;
+        text-align: center;
+    }
+
+    .home-content {
+        align-items: center;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-content h3 {
+        font-size: 3rem;
+    }
+
+    .home-img img {
+        width: 300px;
+        height: 300px;
+        top: 0;
+    }
+
 }

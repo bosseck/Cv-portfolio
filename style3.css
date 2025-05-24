@@ -209,9 +209,39 @@
       color: #00ffee;
     }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      .modal-content {
-        max-width: 95%;
-      }
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
     }
+
+    .header {
+        padding: 2rem 5%;
+    }
+
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--second-bg-color);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 1.5rem 0;
+        font-size: 2rem;
+    }
+}
