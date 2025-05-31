@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Teste </title>
+</head>
+<body>
+<div class="grille">
+  <div class="element"><img src="sit-1.PNG" alt=""></div>
+  <div class="element"><img src="site-2.png" alt=""></div>
+  <div class="element"><img src="site-3.png" alt=""></div>
+  <div class="element"><img src="sit-4.PNG" alt=""></div>
+  <div class="element"><img src="vote-1.PNG" alt=""></div>
+  <div class="element"><img src="vote-2.PNG" alt=""></div>
+  <div class="element"><img src="vote-3.PNG" alt=""></div>
+</div>
+</body>
+<style>
+      .grille {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* plus tu augmente le nombre plus les image augmente sur les lignes*/
+  grid-gap: 20px;
+}
+
+.element img{
+        width: 100%;
+        height: 100%;
+}
+</style>
+</html>

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8"> <!-- Encodage des caractères en UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
-    
+    <!-- ony Pro: https://bosseck.github.io/Cv-portfolio/
+tpe https://bosseck.github.io/Cv-portfolio/index.html -->
     <!-- Lien vers les icônes FontAwesome -->
     <!-- Pour l'icon -->
     <link rel="shortcut icon" href="desktop26.ico" type="image/x-icon">
@@ -28,6 +29,18 @@
             <a href="#home" class="active">Accueil</a>
             <a href="cv.html">Cv</a>
             <a href="portfolio.html">Portfolio</a>
+            <a href="form.html">Contact</a>
+            <a href="#" class="dropdown-toggle">TPE<span class="caret">▼</span></a>
+            <div class="navbar-nav">
+                <li class="dropdown">
+                
+                <ul class="dropdown-menu">
+                <li><a href="grille.html">Grid-Cart</a></li>
+                <li><a href="sous-menu.html">Sous-menu</a></li>
+                <li><a href="#">Page 1-3</a></li>
+                </ul>
+                </li>
+            </div>
         </nav>
     </header>
 
@@ -52,7 +65,7 @@
             <!-- Boutons d'action -->
             <div class="btn-group">
                 <a href="#" class="btn">Engager</a>
-                <a href="#contact" class="btn">Contact</a>
+                <a href="form.html" class="btn">Contact</a>
             </div>
         </div>
 
@@ -70,5 +83,34 @@
     menuIcon.onclick = () => {
         navbar.classList.toggle('active');
     };
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var toggles = document.querySelectorAll('.dropdown-toggle');
+
+    toggles.forEach(function (toggle) {
+      toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        var parent = this.parentElement;
+
+        // Fermer les autres dropdowns
+        document.querySelectorAll('.dropdown').forEach(function (el) {
+          if (el !== parent) el.classList.remove('open');
+        });
+
+        // Ouvrir ou fermer le dropdown cliqué
+        parent.classList.toggle('open');
+      });
+    });
+
+    // Fermer si on clique en dehors
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown').forEach(function (el) {
+          el.classList.remove('open');
+        });
+      }
+    });
+  });
 </script>
 </html>
